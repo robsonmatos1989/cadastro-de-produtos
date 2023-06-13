@@ -1,0 +1,15 @@
+.modal-container{
+	margin-top: 20px;
+}
+.divTable{
+	margin-top: 20px;
+}
+.edit{
+	background-color: green;
+	border-radius: 10px;
+}
+
+.delete{
+	background-color: red;
+	border-radius: 10px;
+}

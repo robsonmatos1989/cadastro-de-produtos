@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript" src="script.js"></script>
+<html lang="en">
 
-	<title>Cadastro de Produtos</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CADASTRO DE PRODUTOS</title>
+  <link rel="stylesheet" href="style.css">
+  <!--<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>-->
 </head>
 
 <body>
-	<div align="center">
-		<h1 align="center">Cadastro de Produtos</h1>
-		<fieldset style="width:50%" align="left">
-		    <form id="product-form">
-		        <label for="name">Nome do Produto:</label>
-		        <input type="text" id="name" name="name" required><br>
-		        <!--O atributo for serve para que o mesmo clicando em Nome do Produto, eu seja direcionadi para o input
-		        	referenciado pelo id="name" (nesse exemplo)
-		        	O Atributo required faz com que as informações não sejam enviadas até que seja preenchido o campo
-		        	obrigatório, no caso ele determina a obrigatoriedade.-->
+  <fieldset>  
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Produtos</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
 
-		        <label for="price">Preço:</label>
-		        <!--Aqui eu defino em min="0.01" que o valor do produto não pode ser inferior a 0.01
-		        	O step serve para que o incremento ou decremento seja de no mínimo 0.01-->
-		        <input type="number" id="price" name="price" step="0.01" required min="0.01"><br> 
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="m-nome">Nome do Produto</label>
+          <input id="m-nome" type="text" required />
+  
+          <label for="m-funcao">Tipo do Produto</label>
+          <input id="m-funcao" type="text" required />
+  
+          <label for="m-salario">Preço</label>
+          <input id="m-salario" type="number" required />
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
 
-		        <button type="submit">Cadastrar</button>
-		    </form>
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome do Produto</th>
+            <th>Tipo do Produto</th>
+            <th>Preço</th>
+            <th class="acao edit">Editar</th>
+            <th class="acao delete">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
 
-		    <h2>Lista de Produtos</h2>
-		    <ul id="product-list">
-		    </ul>
+    
 
-	    </fieldset>
-	</div>
+  </div>
+  </fieldset>
+  <script src="script.js"></script>
 </body>
+
 </html>
