@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="script.js"></script>
+
+	<title>Cadastro de Produtos</title>
+</head>
+
+<body>
+	<div align="center">
+		<h1 align="center">Cadastro de Produtos</h1>
+		<fieldset style="width:50%" align="left">
+		    <form id="product-form">
+		        <label for="name">Nome do Produto:</label>
+		        <input type="text" id="name" name="name" required><br>
+		        <!--O atributo for serve para que o mesmo clicando em Nome do Produto, eu seja direcionadi para o input
+		        	referenciado pelo id="name" (nesse exemplo)
+		        	O Atributo required faz com que as informações não sejam enviadas até que seja preenchido o campo
+		        	obrigatório, no caso ele determina a obrigatoriedade.-->
+
+		        <label for="price">Preço:</label>
+		        <!--Aqui eu defino em min="0.01" que o valor do produto não pode ser inferior a 0.01
+		        	O step serve para que o incremento ou decremento seja de no mínimo 0.01-->
+		        <input type="number" id="price" name="price" step="0.01" required min="0.01"><br> 
+
+		        <button type="submit">Cadastrar</button>
+		    </form>
+
+		    <h2>Lista de Produtos</h2>
+		    <ul id="product-list">
+		    </ul>
+
+	    </fieldset>
+	</div>
+</body>
+</html>
