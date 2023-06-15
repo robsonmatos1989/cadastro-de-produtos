@@ -7,12 +7,16 @@ const btnSalvar = document.querySelector('#btnSalvar')
 
 let itens
 let id
-
+//Essa função é utilizada para exibir o modal para o usuário por meio do 'active'
 function openModal(edit = false, index = 0) {
   modal.classList.add('active')
 
-  modal.onclick = e => {
-    if (e.target.className.indexOf('modal-container') !== -1) {
+  modal.onclick = e => {//Aqui, após clicar no modal, é executada uma função anônima
+    if (e.target.className.indexOf('modal-container') !== -1) {//Aqui, dentro da função anônima
+      //é verificado se existe uma classe chamada 'modal-container', o qual é feito por meio do
+      //e.target.className.indexOf('modal-container'). Então, se clicar fora do modal, o active 
+      //é removido por meio do modal.classList.remove('active'), o que faz com que a interface
+      //seja ocultada do usuário
       modal.classList.remove('active')
     }
   }
