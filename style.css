@@ -1,20 +1,4 @@
-/*.modal-container{
-	margin-top: 20px;
-}
-.divTable{
-	margin-top: 20px;
-	background-color: yellow;
-}
-.edit{
-	background-color: green;
-	border-radius: 10px;
-}
 
-.delete{
-	background-color: red;
-	border-radius: 10px;
-}
-*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
 * {
@@ -61,10 +45,10 @@ button {
 #new {
   font-size: 16px;
   padding: 8px;
-  /*border-radius: 5px;*/
+  border-radius: 5px;
   border: none;
   color: white;
-  background-color: rgb(57, 57, 226);
+  background-color: black;
 }
 
 .divTable {
@@ -206,7 +190,7 @@ tbody tr td.acao {
   padding: 5px 10px; 
   width: 100%;
   border: none;
-  background-color: rgb(57, 57, 226);
+  background-color: black;
   color: white;
 }
 
@@ -241,4 +225,16 @@ td button i {
 
 td button i:first-child {
   margin-right: 10px;
+}
+
+
+
+#developer{
+  
+  margin-top: 100px;
+  text-align: right;
+  color: black;
+  margin-right: 0;
+  font-family: cursive;
+
 }
